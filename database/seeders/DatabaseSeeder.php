@@ -3,6 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Barang;
+use App\Models\Gudang;
+use App\Models\Status;
+use App\Models\Status_Peminjaman;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,7 +24,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $this->call(BarangSeeder::class);
 
         $this->call(UserSeeder::class);
+
+        $this->call(StatusSeeder::class);
+
     }
 }
